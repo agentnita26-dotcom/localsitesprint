@@ -1,14 +1,97 @@
-﻿<svg width="760" height="520" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="hero-gears-svg" width="760" height="520" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .gear-dark,
+    .gear-blue,
+    .gear-light,
+    .plant-left,
+    .plant-right,
+    .plant-mid,
+    .plant-right-small,
+    .hero-floor,
+    .hero-shadow {
+      transition: transform 1s ease, opacity 1s ease;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .gear-dark,
+    .gear-blue,
+    .gear-light,
+    .plant-left,
+    .plant-right,
+    .plant-mid,
+    .plant-right-small {
+      opacity: 0;
+    }
+
+    .hero-floor,
+    .hero-shadow {
+      opacity: 0;
+    }
+
+    .hero-gears-svg.animated .hero-floor,
+    .hero-gears-svg.animated .hero-shadow {
+      opacity: 1;
+    }
+
+    .hero-gears-svg .gear-dark { transform: translateY(-16px) rotate(0deg); }
+    .hero-gears-svg .gear-blue { transform: translateY(18px) rotate(0deg); }
+    .hero-gears-svg .gear-light { transform: translateY(-10px) rotate(0deg); }
+    .hero-gears-svg .plant-left { transform: translateY(16px) rotate(-8deg); }
+    .hero-gears-svg .plant-mid { transform: translateY(16px) rotate(-3deg); }
+    .hero-gears-svg .plant-right { transform: translateY(16px) rotate(8deg); }
+    .hero-gears-svg .plant-right-small { transform: translateY(14px) rotate(10deg); }
+
+    .hero-gears-svg.animated .gear-dark,
+    .hero-gears-svg.animated .gear-blue,
+    .hero-gears-svg.animated .gear-light,
+    .hero-gears-svg.animated .plant-left,
+    .hero-gears-svg.animated .plant-mid,
+    .hero-gears-svg.animated .plant-right,
+    .hero-gears-svg.animated .plant-right-small {
+      opacity: 1;
+    }
+
+    .hero-gears-svg.animated .gear-dark {
+      transform: translateY(0) rotate(360deg);
+      transition-duration: 10s;
+      transition-timing-function: linear;
+      transition-iteration-count: infinite;
+    }
+
+    .hero-gears-svg.animated .gear-blue {
+      transform: translateY(0) rotate(-360deg);
+      transition-duration: 7s;
+      transition-timing-function: linear;
+      transition-iteration-count: infinite;
+    }
+
+    .hero-gears-svg.animated .gear-light {
+      transform: translateY(0) rotate(360deg);
+      transition-duration: 13s;
+      transition-timing-function: linear;
+      transition-iteration-count: infinite;
+    }
+
+    .hero-gears-svg.animated .plant-left,
+    .hero-gears-svg.animated .plant-mid,
+    .hero-gears-svg.animated .plant-right,
+    .hero-gears-svg.animated .plant-right-small {
+      transform: translateY(0) rotate(0deg);
+    }
+  </style>
+
   <rect width="760" height="520" rx="32" fill="#FCFCFD"/>
-  <ellipse cx="378" cy="430" rx="230" ry="26" fill="#E7E9ED"/>
-  <path d="M90 370H650" stroke="#AEB4BE" stroke-width="3" stroke-linecap="round"/>
+  <ellipse class="hero-shadow" cx="378" cy="430" rx="230" ry="26" fill="#E7E9ED"/>
+  <path class="hero-floor" d="M90 370H650" stroke="#AEB4BE" stroke-width="3" stroke-linecap="round"/>
   <rect x="88" y="310" width="28" height="60" rx="4" fill="#37424D"/>
   <rect x="94" y="292" width="16" height="24" rx="4" fill="#4A5562"/>
-  <path d="M103 292C87 276 81 254 88 238C108 244 118 264 115 283" fill="#5D8CFF"/>
-  <path d="M102 289C116 271 137 261 157 266C151 287 132 300 111 298" fill="#2E62FF"/>
-  <path d="M103 304C87 288 80 266 86 249C105 255 117 275 114 296" fill="#8FAEFF"/>
-  <path d="M104 300C118 282 139 272 159 277C153 299 133 312 112 309" fill="#5D8CFF"/>
-  <g transform="translate(520 120)">
+  <path class="plant-left" d="M103 292C87 276 81 254 88 238C108 244 118 264 115 283" fill="#5D8CFF"/>
+  <path class="plant-right" d="M102 289C116 271 137 261 157 266C151 287 132 300 111 298" fill="#2E62FF"/>
+  <path class="plant-mid" d="M103 304C87 288 80 266 86 249C105 255 117 275 114 296" fill="#8FAEFF"/>
+  <path class="plant-right-small" d="M104 300C118 282 139 272 159 277C153 299 133 312 112 309" fill="#5D8CFF"/>
+
+  <g class="gear-dark" transform="translate(520 120)">
     <circle cx="0" cy="0" r="38" fill="#313B44"/>
     <circle cx="0" cy="0" r="14" fill="#FCFCFD"/>
     <circle cx="0" cy="0" r="5" fill="#313B44"/>
@@ -22,9 +105,9 @@
       <rect x="-36" y="25" width="8" height="18" rx="2" transform="rotate(-135 -32 34)"/>
       <rect x="-36" y="-43" width="8" height="18" rx="2" transform="rotate(-45 -32 -34)"/>
     </g>
-    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="10s" repeatCount="indefinite"/>
   </g>
-  <g transform="translate(600 168)">
+
+  <g class="gear-blue" transform="translate(600 168)">
     <circle cx="0" cy="0" r="26" fill="#4F7DFF"/>
     <circle cx="0" cy="0" r="10" fill="#FCFCFD"/>
     <circle cx="0" cy="0" r="4" fill="#4F7DFF"/>
@@ -38,9 +121,9 @@
       <rect x="-24" y="15" width="6" height="14" rx="2" transform="rotate(-135 -21 22)"/>
       <rect x="-24" y="-29" width="6" height="14" rx="2" transform="rotate(-45 -21 -22)"/>
     </g>
-    <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="7s" repeatCount="indefinite"/>
   </g>
-  <g transform="translate(548 130) scale(0.72)">
+
+  <g class="gear-light" transform="translate(548 130) scale(0.72)">
     <circle cx="0" cy="0" r="22" fill="#AFC5FF"/>
     <circle cx="0" cy="0" r="8" fill="#FCFCFD"/>
     <circle cx="0" cy="0" r="3" fill="#AFC5FF"/>
@@ -54,6 +137,5 @@
       <rect x="-20" y="12" width="5" height="12" rx="2" transform="rotate(-135 -17.5 18)"/>
       <rect x="-20" y="-24" width="5" height="12" rx="2" transform="rotate(-45 -17.5 -18)"/>
     </g>
-    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="13s" repeatCount="indefinite"/>
   </g>
 </svg>

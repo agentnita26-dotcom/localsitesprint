@@ -284,6 +284,13 @@
           if (icon) icon.style.transform = parent.open ? 'rotate(0deg)' : 'rotate(90deg)';
         });
       });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        window.setTimeout(function () {
+          const heroSvg = document.querySelector('.hero-illustration-wrap .hero-gears-svg');
+          if (heroSvg) heroSvg.classList.add('animated');
+        }, 1000);
+      });
     </script>
   </body>
 </html>
