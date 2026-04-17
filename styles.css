@@ -394,6 +394,10 @@ img { max-width: 100%; display: block; }
   padding: 0;
 }
 
+.hero-illustration-gears {
+  max-width: 500px;
+}
+
 .check-list,
 .tick-list,
 .simple-list,
